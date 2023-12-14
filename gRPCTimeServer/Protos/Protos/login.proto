@@ -1,0 +1,16 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LoginService";
+
+package login;
+
+// The Login service provides RPCs for creating authentication tokens
+service Login {
+  rpc CreateToken(CreateTokenRequest) returns (CreateTokenResponse);
+}
+
+message CreateTokenRequest {}
+
+message CreateTokenResponse {
+  string token = 1;
+}

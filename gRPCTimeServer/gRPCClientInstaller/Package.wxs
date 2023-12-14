@@ -1,0 +1,11 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Name="gRPC Client" Manufacturer="Bogdan" Version="1.0.0.0" UpgradeCode="79a7298d-1c36-474c-a2e0-cec6d412102a">
+    <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
+
+    <MediaTemplate EmbedCab="yes" />
+    
+    <Feature Id="Main">
+      <ComponentGroupRef Id="ClientFiles" />
+    </Feature>
+  </Package>
+</Wix>

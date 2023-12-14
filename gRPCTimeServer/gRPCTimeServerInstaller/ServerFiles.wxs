@@ -1,0 +1,38 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Component Id="cmp8UUaYEqazDlsXijrnr5jdSNyMTw" Guid="*">
+                <File Id="filHxb8pphGibvS58LtDjEfGDzpMAc" KeyPath="yes" Source="$(var.HarvestPath)\appsettings.Development.json" />
+            </Component>
+            <Component Id="cmpOGkoJkApsx09TmwlmeSYNXu8O2k" Guid="*">
+                <File Id="filhOmU2zCUvc3hRee0kCgcGDUVj8c" KeyPath="yes" Source="$(var.HarvestPath)\appsettings.json" />
+            </Component>
+            <Component Id="cmpK5ySGSiRoF97d_uIMN9lDAvs51Q" Guid="*">
+                <File Id="filnRZXro4jqlWY3zQ6yi6T.QpieEM" KeyPath="yes" Source="$(var.HarvestPath)\aspnetcorev2_inprocess.dll" />
+            </Component>
+            <Component Id="cmph.fzDfoNceBWJcWz.Ie8gP0mSks" Guid="*">
+                <File Id="filhiGPa7sPCz9nqpszfBqHfSaFcZs" KeyPath="yes" Source="$(var.HarvestPath)\e_sqlite3.dll" />
+            </Component>
+            <Component Id="cmp.yaLWOp7TSJRWLZ.mydewOnRnss" Guid="*">
+                <File Id="filpGRwDd1goDmSUTiu2E7cb5X_qIQ" KeyPath="yes" Source="$(var.HarvestPath)\gRPCTimeService.exe" />
+            </Component>
+            <Component Id="cmpAn7iTdwp2nYbY525MQF1_zMPoHc" Guid="*">
+                <File Id="filL4ni2rRS0_Gmd90mKxkndvBIBoI" KeyPath="yes" Source="$(var.HarvestPath)\gRPCTimeService.pdb" />
+            </Component>
+            <Component Id="cmp6e_0_mvckeg6ezzAKTmyoz1f014" Guid="*">
+                <File Id="filTz2.bmhJNV5fU.37dPKTygTf73U" KeyPath="yes" Source="$(var.HarvestPath)\web.config" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="ServerFiles">
+            <ComponentRef Id="cmp8UUaYEqazDlsXijrnr5jdSNyMTw" />
+            <ComponentRef Id="cmpOGkoJkApsx09TmwlmeSYNXu8O2k" />
+            <ComponentRef Id="cmpK5ySGSiRoF97d_uIMN9lDAvs51Q" />
+            <ComponentRef Id="cmph.fzDfoNceBWJcWz.Ie8gP0mSks" />
+            <ComponentRef Id="cmp.yaLWOp7TSJRWLZ.mydewOnRnss" />
+            <ComponentRef Id="cmpAn7iTdwp2nYbY525MQF1_zMPoHc" />
+            <ComponentRef Id="cmp6e_0_mvckeg6ezzAKTmyoz1f014" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>
