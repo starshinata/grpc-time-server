@@ -1,1 +1,2 @@
-# grpc-time-server
+# Download the setups from the Releases tab on the right
+

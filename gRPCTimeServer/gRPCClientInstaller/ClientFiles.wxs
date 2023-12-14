@@ -1,0 +1,18 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Component Id="cmpfFV4qgzvPoKKTHnJDdYwmgnHTv8" Guid="*">
+                <File Id="filhP6k47cSkdMd.3rGLE0Cj3AXsq8" KeyPath="yes" Source="$(var.HarvestPath)\gRPCClient.exe" />
+            </Component>
+            <Component Id="cmp6bSkj_LT6nw2iutDKWHxgFXQstg" Guid="*">
+                <File Id="fillrh7ErJkTYm.u3DIUMHhRHSjYEk" KeyPath="yes" Source="$(var.HarvestPath)\gRPCClient.pdb" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="ClientFiles">
+            <ComponentRef Id="cmpfFV4qgzvPoKKTHnJDdYwmgnHTv8" />
+            <ComponentRef Id="cmp6bSkj_LT6nw2iutDKWHxgFXQstg" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

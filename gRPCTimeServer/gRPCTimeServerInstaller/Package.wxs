@@ -1,0 +1,11 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Name="gRPC Time Server" Manufacturer="Bogdan" Version="1.0.0.0" UpgradeCode="4c81fad7-a47a-4d02-9a48-e0ceda3df2dd">
+    <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
+
+    <MediaTemplate EmbedCab="yes" />
+    
+    <Feature Id="Main">
+      <ComponentGroupRef Id="ServerFiles" />
+    </Feature>
+  </Package>
+</Wix>

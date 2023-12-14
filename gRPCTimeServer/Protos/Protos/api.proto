@@ -1,0 +1,39 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "TimeService";
+
+package time;
+
+import "google/protobuf/timestamp.proto";
+
+// The Time service provides RPCs for time-related operations.
+service Time {
+
+  // Retrieves the current Coordinated Universal Time (UTC).
+  rpc GetCurrentTimeUTC (GetCurrentTimeUTCRequest) returns (GetCurrentTimeUTCResponse);
+
+  // Retrieves time retrieval logs.
+  rpc GetTimeRetrievalLogs (GetTimeRetrievalLogsRequest) returns (GetTimeRetrievalLogsResponse);
+}
+
+message GetCurrentTimeUTCRequest {}
+
+message GetCurrentTimeUTCResponse {
+  google.protobuf.Timestamp utcTime = 1;
+}
+
+message GetTimeRetrievalLogsRequest {}
+
+message GetTimeRetrievalLogsResponse {
+  repeated TimeRetrievalLog timeRetrievalLogs = 1;
+}
+
+// Represents a time retrieval log.
+message TimeRetrievalLog {
+  
+  // Unique identifier for the log entry.
+  int32 id = 1;
+  
+  // Timestamp indicating the Coordinated Universal Time (UTC) when the log was retrieved.
+  google.protobuf.Timestamp utcTime = 2;
+}
